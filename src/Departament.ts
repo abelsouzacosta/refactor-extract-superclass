@@ -2,7 +2,9 @@ import { Employee } from "./Employee";
 import { Party } from "./Party";
 
 export class Departament extends Party {
-  constructor(protected name: string, protected staff: Employee[]) {}
+  constructor(protected name: string, protected staff: Employee[]) {
+    super();
+  }
 
   getStaff(): Employee[] {
     return this.staff.slice();

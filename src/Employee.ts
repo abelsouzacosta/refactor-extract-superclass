@@ -5,7 +5,9 @@ export class Employee extends Party {
     protected id: string,
     protected name: string,
     protected monthlyCosts: number
-  ) {}
+  ) {
+    super();
+  }
 
   getAnnualCosts(): number {
     return this.monthlyCosts * 12;
