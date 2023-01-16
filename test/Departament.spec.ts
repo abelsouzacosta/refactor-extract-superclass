@@ -23,4 +23,16 @@ describe("Departament", () => {
 
     expect(annualCosts).toBe(15000 * 12);
   });
+
+  it("should return the name of the department", () => {
+    const departmentName = department.getName();
+
+    expect(departmentName).toBe("IT");
+  });
+
+  it("should get department staff", () => {
+    const departmentStaff = department.getStaff();
+
+    expect(departmentStaff).toEqual(staff);
+  });
 });
