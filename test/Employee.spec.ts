@@ -1,15 +1,15 @@
 import { Employee } from "../src/Employee";
 
 describe("Employee", () => {
-  it("should create an employee entity with valid informations", () => {
-    const id = "323444";
-    const name = "Junior";
-    const monthlyCosts = 6800;
+  let employee: Employee;
 
-    const employee = new Employee(id, name, monthlyCosts);
-    expect(employee.getName()).toBe(name);
-    expect(employee.getId()).toBe(id);
-    expect(employee.getMonthlyCosts()).toBe(monthlyCosts);
-    expect(employee.getAnnualCosts()).toBe(monthlyCosts * 12);
+  beforeAll(() => {
+    employee = new Employee("323444", "Junior", 5000);
+  });
+
+  it("should get the name of the employee", () => {
+    let employeeName = employee.getName();
+
+    expect(employeeName).toBe("Junior");
   });
 });

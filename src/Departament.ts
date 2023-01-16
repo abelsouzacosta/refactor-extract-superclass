@@ -3,15 +3,11 @@ import { Party } from "./Party";
 
 export class Departament extends Party {
   constructor(protected name: string, protected staff: Employee[]) {
-    super();
+    super(name);
   }
 
   getStaff(): Employee[] {
     return this.staff.slice();
-  }
-
-  getName(): string {
-    return this.name;
   }
 
   getMonthlyCosts(): number {
