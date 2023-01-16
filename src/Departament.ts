@@ -1,6 +1,7 @@
 import { Employee } from "./Employee";
+import { Party } from "./Party";
 
-export class Departament {
+export class Departament extends Party {
   constructor(protected name: string, protected staff: Employee[]) {}
 
   getStaff(): Employee[] {

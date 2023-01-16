@@ -1,4 +1,6 @@
-export class Employee {
+import { Party } from "./Party";
+
+export class Employee extends Party {
   constructor(
     protected id: string,
     protected name: string,
